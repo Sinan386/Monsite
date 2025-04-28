@@ -1,5 +1,19 @@
 Wireframe : Schéma ou maquette basse fidélité représentant l’organisation visuelle et fonctionnelle des pages d’un site avant la réalisation graphique.
 
-Issue : Ticket ou tâche sur GitHub décrivant un travail à réaliser, un bug ou une discussion, identifié par un numéro unique.
+Issue (Github) : Ticket ou tâche sur GitHub décrivant un travail à réaliser, un bug ou une discussion, identifié par un numéro unique.
+
+Label (GitHub) : Étiquette colorée et personnalisable apposée sur une issue ou une pull request pour la classer (type, priorité, état…), faciliter son tri et son suivi dans le projet.
+
+Milestone (GitHub)
+-Regroupement d’issues et de pull requests autour d’un objectif ou d’une version, avec une date d’échéance. Permet de :
+-Définir un objectif (release, sprint, tâche majeure)
+-Suivre l’avancement global via le pourcentage d’issues fermées
+-Organiser le travail en échéances, faciliter la planification et la vue d’ensemble.
+
+Agile
+Méthode de gestion de projet en petits cycles (sprints) qui permet de livrer rapidement, de s’adapter aux retours et de faire collaborer étroitement les équipes.
+
+
+
 
 
