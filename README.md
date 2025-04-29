@@ -28,7 +28,7 @@ Une plateforme de découverte des dernières sorties d’anime, avec un feed d�
 - **Kanban & suivi** : GitHub Projects (To do / In progress / Done) 
 
 
-# Glossaire
+# 📚 Glossaire
 Wireframe : Schéma ou maquette basse fidélité représentant l’organisation visuelle et fonctionnelle des pages d’un site avant la réalisation graphique.
 
 Issue (Github) : Ticket ou tâche sur GitHub décrivant un travail à réaliser, un bug ou une discussion, identifié par un numéro unique.
