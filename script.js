@@ -1,7 +1,19 @@
-async function afficherFilms() {
-    const reponse = await fetch("https://raw.githubusercontent.com/jikan-me/jikan-rest/master/storage/api-docs/api-docs.json");
-    const films = await reponse.json();
-    console.log(films);
-  }
+// async function afficherJoke() {
+//     const reponse = await fetch("https://v2.jokeapi.dev/joke/Any?lang=fr");
+//     const joke = await reponse.json();
+//     console.log(joke);
+//   }
 
-  afficherFilms();
+//   afficherJoke();
+
+foreach ( i = 0; i < 10; i++) {
+fetch("https://v2.jokeapi.dev/joke/Any?lang=fr")
+    .then(res => res.json())
+    .then(joke => {
+        console.log(joke)
+       let a = joke;
+       });
+}
+    
+
+    
