@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AniVers - Accueil</title>
-    <link rel="stylesheet" href="style.css"> <!-- Appel de la page-->
-    <link href="https://db.onlinewebfonts.com/c/62a82f4e8ed28ff084ecea207ff92bbe?family=FOT-NewRodin+Pro+EB"rel="stylesheet">       
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-    <section> 
+      <div class="header-container">
+        <!-- Logo centré -->
+        <img src="image/ANIVERS.png" class="logo" alt="logo Anivers" />
 
-    <img src="image/ANIVERS.png" alt="logo Anivers">
-    </section>
+        <!-- Dropdown en haut à droite -->
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Menu ▾</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">Feed</a>
+            <a href="#">Gallery</a>
+            <a href="#">Jeux</a>
+          </div>
+        </div>
+      </div>
     </header>
+
     <main>
+      <!-- Blague -->
+      <div id="bouton">
+        <button id="reloadJokes">Actualise les blagues</button>
+      </div>
 
-<section>
-    <h1 class="logo">Feed</h1>
- <!-- Nouveau conteneur pour la blague -->
-  <div id ="feed"></div>
-    <button id="new-joke">Nouvelle blague </button>
-        
-</section>     
-    
+      <section>
+        <h1>Feed</h1>
+        <div id="jokes"></div>
+      </section>
 
-
-
-
+      <section id="joke-form-section">
+        <h1>Ajouter une blague</h1>
+        <form id="joke-form">
+          <label for="question">Ajouter une nouvelle blague:</label>
+          <input type="text" id="question" name="question" required />
+          <button type="submit">Ajouter</button>
+        </form>
+      </section>
     </main>
 
-
-
-
-
-
-
-
-<script src="script.js"></script> <!-- Appel de Script.js-->    
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

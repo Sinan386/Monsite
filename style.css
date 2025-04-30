@@ -1,0 +1,103 @@
+header {
+  background: #ed1a1a;
+  border-radius: 10px;
+  padding: 20px 0;
+}
+
+/* conteneur centré horizontalement */
+.header-container {
+  position: relative;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* logo centré */
+.logo {
+  display: flex;
+  margin: 0 auto;
+  width: 120px;
+  height: auto;
+}
+
+/* dropdown positionné en haut à droite du conteneur */
+.dropdown {
+  position: absolute;
+  top: 20px; /* même valeur que le padding-top de header */
+  right: 0;
+}
+
+/* --------------- Dropdown styling --------------- */
+.dropbtn {
+  background-color: #fffc00;
+  border-radius: 10px;
+  color: #ed1a1a;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-family: "FOT-NewRodin Pro EB", sans-serif;
+}
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #7c0000;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 100px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: #000;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  background-color: #7c2222;
+}
+
+/* classe ajoutée en JS pour ouvrir le menu */
+.show {
+  display: block;
+}
+
+#reloadJokes {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ed1a1a;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  font-family: "FOT-NewRodin Pro EB", sans-serif;
+}
+
+#reloadJokes:hover,
+#reloadJokes:focus {
+  background-color: #7c0000;
+}
+h1 {
+  text-align: center;
+}
+
+#bouton {
+  display: flex;
+  justify-content: end;
+}
+
+.joke {
+  display: flex;
+}
+
+.joke-card {
+  width: 30%;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+}
