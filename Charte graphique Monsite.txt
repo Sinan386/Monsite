@@ -1,0 +1,16 @@
+Charte graphique :
+
+#ed1a1a = rouge claire
+#a70000 = rouge foncé
+#7C2222 = rouge bordeau
+#cd5050 = rouge pale
+#fffc00 = jaune pétant
+#efbc00 = jaune foncé
+
+font:-Commando 
+-NewRodin Pro EB
+
+$> git checkout -b feat1
+$> git add
+$> git commit -m "commit feat1 message"
+$> git push origin feat1

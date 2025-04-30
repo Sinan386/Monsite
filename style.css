@@ -90,7 +90,7 @@ h1 {
   justify-content: end;
 }
 
-.joke {
+#jokes {
   display: flex;
 }
 

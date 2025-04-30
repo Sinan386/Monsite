@@ -45,7 +45,7 @@ function getJokes(jokeNum) {
   }
 }
 
-getJokes(5); // Je veux afficher 5 blagues
+getJokes(4); // Je veux afficher 4 blagues
 
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
@@ -64,3 +64,5 @@ window.onclick = function (event) {
     }
   }
 };
+
+const form = document.getElementById("joke-form");
