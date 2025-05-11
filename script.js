@@ -6,7 +6,7 @@ buttonReload.addEventListener("click", function () {
   container.innerHTML = "";
 
   // add new jokes
-  getJokes(4); // Je veux afficher 5 blagues
+  getJokes(4); // Je veux afficher 4 blagues
 });
 
 /**
@@ -66,3 +66,25 @@ window.onclick = function (event) {
 };
 
 const form = document.getElementById("joke-form");
+
+// Écoute du submit pour ajouter une nouvelle « blague »
+form.addEventListener("submit", function (event) {
+  // on met un event submit  pour que lorsque je fais entré ou Ajouter ça m'ajoute un texte
+  event.preventDefault(); // on empêche le rechargement de la page lorsque j'appuie sur Ajouter
+
+  const text = document.getElementById("text").value.trim();
+
+ //  if (!text) return; // si rien n'est saisi, rien ne se passera
+
+  // Récupère le tableau joke-card et incrémente de +1 en déterminant l'index de la nouvelle carte
+  const nextIndex = container.getElementsByClassName("joke-card").length + 1;
+
+  // On rappel displayJoke pour crée une nouvelle card, on écris notre texte, pas de réponse car on en a pas besoin
+  // Index le numéro de la blague 4, 5, 6, etc...
+  displayJoke(text, "", nextIndex);
+
+  // 4) on vide le formulaire
+  form.reset();
+});
+
+

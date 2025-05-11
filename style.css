@@ -27,7 +27,7 @@ header {
   right: 0;
 }
 
-/* --------------- Dropdown styling --------------- */
+/* ---Dropdown style --- */
 .dropbtn {
   background-color: #fffc00;
   border-radius: 10px;
@@ -94,6 +94,11 @@ h1 {
   display: flex;
 }
 
+#add-joke-form {
+  display: flex;
+
+}
+
 .joke-card {
   width: 30%;
   margin: 10px;
@@ -101,3 +106,21 @@ h1 {
   padding: 10px;
   border-radius: 10px;
 }
+#joke-form {
+  align-items: center;
+}
+
+
+body {
+  display:flex;
+  flex-direction: column;
+}
+
+@media screen and(max-width: 1200px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
