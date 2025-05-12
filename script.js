@@ -111,4 +111,20 @@ if (document.querySelector("#gallery")) {
   refreshGallery();
  }
 
- 
+ // Événement sur bouton Charger
+  reload.addEventListener('click', function() {
+    refreshGallery();
+  });
+
+  // --- Fonctions de bascule d'affichage ---
+  function showGrid() {
+    gallery.classList.remove('list');
+    gallery.classList.add('grid');
+  }
+
+  function showList() {
+    gallery.classList.remove('grid');
+    gallery.classList.add('list');
+  }
+
+
