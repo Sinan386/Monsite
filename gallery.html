@@ -23,10 +23,22 @@
         </div>
       </div>
     </header>
-    <section id="gallery-section"></section>
+  <main>
+    <section id="gallery-section">
     <h1>Galerie</h1>
     
+    <div id="nbreImage">
+      <label for="count"> Nombre d'images</label>
+      <input type="number" id="count" min="1" max="50"/>
+      <button id ="reload"> Charger</button>
+      <button id="gridView" class="active">Mosaïque</button> <!-- Bouton pour switch mosaique et colone -->
+      <button id="listView">Colonne</button>
+      </div>
 
+
+      <div id="gallery" class="grid"></div>
+    </section>
+  </main>
 
     
     <script src="script.js"></script>

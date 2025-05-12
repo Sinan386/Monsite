@@ -124,3 +124,13 @@ body {
   
 }
 
+#nbreImage {
+  display: flex;
+  justify-content: center;
+}
+
+#gallery {
+  display: flex;
+  justify-content: center;
+}
+
