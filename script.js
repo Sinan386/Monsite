@@ -92,39 +92,68 @@ if (document.querySelector("#gallery")) {
     gallery.innerHTML = ""; // vide la galerie
     for (let i = 0; i < n; i++) {
       // on crée un conteneur <div> pour utiliser innerHTML
-      const imgContainer = document.createElement("div"); //`<img src="https://picsum.photos/400?random=${Math.random()}" alt="Image #${i+1}">`;
-      imgContainer.innerHTML = `<img src="https://picsum.photos/200?random=${Math.random()}" alt="Image #${i+1}">`;
+      const imgContainer = document.createElement("div");
+      //`<img src="https://picsum.photos/400?random=${Math.random()}" alt="Image #${i+1}">`;
+      imgContainer.classList.add("imageCharge");
+      imgContainer.innerHTML = `<img src="https://picsum.photos/200?random=${Math.random()}" alt="Image #${
+        i + 1
+      }">`;
       gallery.appendChild(imgContainer);
     }
   }
 
-// 1) on crée le handler une seule fois
+  // 1) on crée le handler une seule fois
   function refreshGallery() {
     const n = Number(countIn.value) || 1;
     loadPicsum(n);
   }
-
   // 2) on l’assigne au clic
-  reload.addEventListener('click', refreshGallery);
-
+  reload.addEventListener("click", refreshGallery);
   // 3) on l’appelle pour l’initialisation
   refreshGallery();
- }
+}
 
- // Événement sur bouton Charger
-  reload.addEventListener('click', function() {
-    refreshGallery();
-  });
+// Événement sur bouton Charger
+reload.addEventListener("click", function () {
+  refreshGallery();
+});
 
-  // --- Fonctions de bascule d'affichage ---
-  function showGrid() {
-    gallery.classList.remove('list');
-    gallery.classList.add('grid');
+// --- Fonctions de bascule d'affichage ---
+function showGrid() {
+  gallery.classList.remove("list");
+  gallery.classList.add("grid");
+}
+
+function showList() {
+  gallery.classList.remove("grid");
+  gallery.classList.add("list");
+}
+
+// juste après avoir récupéré `gallery`
+const uploadInput = document.getElementById("uploadImage");
+
+uploadInput.addEventListener("change", function (event) {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  // vérifie l’extension
+  if (file.type !== "image/png") {
+    alert("Merci de sélectionner un fichier PNG.");
+    return;
   }
 
-  function showList() {
-    gallery.classList.remove('grid');
-    gallery.classList.add('list');
-  }
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    // crée un <div> pour conserver la même structure que loadPicsum
+    const imgContainer = document.createElement("div");
+    imgContainer.id = "trucmuche";
+    imgContainer.innerHTML =
+      '<img src="' + e.target.result + '" alt="Image chargée">';
+    gallery.appendChild(imgContainer);
+  };
+  // lit le fichier en Data URL (base64)
+  reader.readAsDataURL(file);
 
-
+  // remet l’input à zéro pour pouvoir re-sélectionner la même image si besoin
+  uploadInput.value = "";
+});

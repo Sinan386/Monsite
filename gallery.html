@@ -36,8 +36,16 @@
       <button onclick="showList()">Colonne</button>
       </div>
 
-      <div id="gallery"></div>
+      <div id="gallery" class="grid"></div>
     </section>
+    <div id="upload">
+      <!-- 1) Le label agit comme un bouton -->
+      <label for="uploadImage" class="btn">Parcourir</label>
+      <!-- 2) On cache l’input natif -->
+      <input type="file" id="uploadImage" accept="image/png" />
+    </div>
+
+
   </main>
 
     

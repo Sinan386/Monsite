@@ -131,8 +131,9 @@ body {
 
 #gallery {
   display: flex;
-  /* justify-content: center; */
-}
+  justify-content: center;
+
+  }
 
 .list {
   
@@ -142,4 +143,46 @@ body {
 
 .grid {
   justify-content: center;
+}
+
+#upload {
+  margin: 1rem;
+  text-align: center;
+  
+}
+#upload input[type="file"] {
+  display: none; /* plus de bouton ni de texte "No file chosen" */
+}
+
+/* Style ton label comme un vrai bouton */
+#upload label.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #ed1a1a;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#upload label.btn:hover {
+  background: #7c2222;
+}
+
+#trucmuche img{
+  width: 10rem;
+  height: 10rem;
+}
+
+.imageCharge img{
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  position: relative;
+}
+.gallery-section {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+#bouttonSuppr{
+  position: absolute;
 }
